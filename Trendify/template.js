@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loader.innerHTML = `
     <div class="loader-wrapper">
       <div class="spinner"></div>
+      <br />
       <p style="text-align: center; margin-top: 10px;">Loading Trendify...</p>
     </div>
   `;

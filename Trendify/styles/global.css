@@ -6,13 +6,24 @@
   margin: 0;
 }
 
+html,
 body {
-  padding-bottom: 60px; /* same as footer height */
   overflow-x: hidden;
   background-color: #fff;
   color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30px 10px 40px 10px;
+}
 /* LOGO */
 .logo {
   width: 100px;
@@ -144,7 +155,7 @@ body {
 
 /* === MARQUEE SECTION === */
 .marquee {
-  background: #fffcc8;
+  background: #faf6cf;
   overflow: hidden;
   white-space: nowrap;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -177,17 +188,31 @@ body {
 
 /* === FOOTER === */
 footer {
-  position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  background-color: #fffcc8;
+
+  background-color: #b6b181;
   color: #333;
   text-align: center;
-  padding: 15px 10px;
+  padding: 40px 0;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
   font-weight: 500;
-  z-index: 1000;
+}
+.footer,
+.footer-text {
+  font-size: 14px;
+  color: #666;
+}
+.footer-copyright {
+  font-size: 10px;
+  color: #666;
+  margin-top: 10px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
 }
 
 /* === LOADER === */
@@ -210,7 +235,10 @@ footer {
   height: 50px;
   animation: spin 1s linear infinite;
 }
-
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+}
 .loader-wrapper p {
   margin-top: 12px;
   font-weight: 500;
@@ -218,6 +246,7 @@ footer {
   font-size: 15px;
   letter-spacing: 0.5px;
   text-align: center;
+  padding-left: 10px;
 }
 
 @keyframes spin {
