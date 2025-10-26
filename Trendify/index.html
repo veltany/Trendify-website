@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trendify</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendify</title>
+    <link rel="stylesheet" href="/Trendify/styles/global.css" />
 
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <section id="header">
-    <a href="#"><img src="images/logo2.png" class="logo" alt="logo"></a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- This javascript file loads our template -->
+    <script src="/Trendify/template.js"></script>
+  </head>
+  <!--Just include onload="includeTemplates() in any new page body tag, thats all"-->
+  <body onload="includeTemplates()">
+    <!-- Insert header here or anywhere -->
+    <div data-include="/Trendify/templates/header.html"></div>
 
-    <div>
-      <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="board.html">Board</a></li>
-        <li><a href="inquiries.html">Inquiries</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
-      </ul>
-    </div>
-  </section>
+    <section class="hero">
+      <h4>Upcoming Events</h4>
+      <h2>Coming Soon</h2>
+      <h1>On all products</h1>
+      <button>View Now</button>
+    </section>
 
-  <section id="hero">
-    <h4>Upcoming Events</h4>
-    <h2>Coming Soon</h2>
-    <h1>On all products</h1>
-    <button>View Now</button>
-  </section>
-
-  <section id="marquee">
-    <marquee behavior="scroll" direction="right">Upcoming events will be displayed across this page</marquee>
-  </section>
-  
-  <footer>
-    this will be where footer is displayed
-  </footer>
-</body>
+    <div data-include="/Trendify/templates/footer.html"></div>
+  </body>
 </html>
